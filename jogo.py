@@ -1,7 +1,6 @@
 import pygame, sys,os,time
 from pygame.locals import *
 import dimensoes, fundo, eventos, textos, sons, objetos, cutscene
-from moviepy.editor import VideoFileClip, preview
 
 class Main():
 	def __init__(self):
@@ -214,12 +213,6 @@ class Main():
 						if event.key == K_a:
 							self.move_player_left = True
 							self.update2()
-						#easter egg
-						if event.key == K_h:
-							if self.posicao_player[0] >= -120 and self.posicao_player[0] <=-50:
-								clip = VideoFileClip('videos/video.mp4')
-								clip.preview()
-								self.screen,self.w,self.h = pygame.display.set_mode((1366,780)), 1366,780
 
 						#eventos de interacao
 						if self.dia == 1 or  self.dia == 1.1:
